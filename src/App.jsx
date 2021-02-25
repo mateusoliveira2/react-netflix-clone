@@ -11,8 +11,7 @@ class App extends React.Component{
     super(props);
     this.state = {
       moviesList: [],
-      emphasisMovie: null,
-      blackHeader: false,
+      emphasisMovie: null
     }
   }
 
@@ -38,11 +37,11 @@ class App extends React.Component{
   }
 
   render(){
-    const {moviesList, emphasisMovie, blackHeader} = this.state;
+    const {moviesList, emphasisMovie} = this.state;
 
     return(
       <div className="page">
-        <Header black={blackHeader}/>
+        <Header />
 
         {emphasisMovie && 
           <Emphasis emphasisMovie={emphasisMovie}/> 
