@@ -3,6 +3,7 @@ import {getHomeList, getMovieInfo} from './hub'
 import MoviesRow from './components/movies-row/MoviesRow'
 import Emphasis from './components/emphasis/Emphasis'
 import Header from './components/header/Header'
+import {Helmet} from "react-helmet";
 
 import './App.css'
 
@@ -41,6 +42,12 @@ class App extends React.Component{
 
     return(
       <div className="page">
+
+        <Helmet>
+          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+
+
+        </Helmet>
         <Header />
 
         {emphasisMovie && 
